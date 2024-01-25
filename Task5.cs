@@ -1,17 +1,18 @@
-// Your program should start at this line.
-/*
-Example:
-Move();
-Move();
-Move();
-Turn();
-Move();
-Move();
-Turn();
-Turn();
-Turn();
-Move();
-*/
+while(AtGoal() == false)
+{
+    if (peekLeftIfMultipleChoises() == true)
+    {
+     TurnLeft();
+    }
+    else if (Peek() == true)
+    {
+     Move();
+    }
+    else
+    {
+     TurnRight();
+    }
+}
 
 
 #region Basic functions
@@ -23,9 +24,20 @@ void Move()
     // Moves the car 1 cell in the direction it is heading. 
 }
 
-void Turn()
+void TurnRight()
 {
     // Turns the car 90 deg clockwise.
+}
+
+void TurnLeft()
+{
+    // Turns the car 90 deg counter clockwise.
+}
+
+bool peekLeftIfMultipleChoises()
+{
+    // when met with multiple choices of where to go it will always choose the leftmost path.
+    return true; // Just a placeholder value. 
 }
 
 bool Peek()
