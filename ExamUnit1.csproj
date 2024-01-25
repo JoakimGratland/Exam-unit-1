@@ -5,7 +5,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <DefaultItemExcludes>$(DefaultItemExcludes);task*.cs;</DefaultItemExcludes>
   </PropertyGroup>
-  <DefaultItemExcludes>$(DefaultItemExcludes);task*.cs;</DefaultItemExcludes>
+  
 
 </Project>
