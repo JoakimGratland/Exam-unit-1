@@ -1,26 +1,26 @@
-// Your program should start at this line.
-/*
-Example:
-Move();
-Move();
-Move();
-Turn();
-Move();
-Move();
-Turn();
-Turn();
-Turn();
-Move();
-*/
-
+while(AtGoal() == false)
+{
+    if (Peek() == true)
+    {
+     Move();
+     leaveTrailBehindCar();
+    }
+    else
+    {
+        Turn();
+    }
+}
 
 #region Basic functions
-// These functions are just her to make your intelisense work. 
-// They only have a conceptual function.
 
 void Move()
 {
     // Moves the car 1 cell in the direction it is heading. 
+}
+
+void leaveTrailBehindCar()
+{
+    //leaves a trail behind the car that prevents the car from going back where it came from
 }
 
 void Turn()
