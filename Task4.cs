@@ -1,17 +1,80 @@
-// Your program should start at this line.
-/*
-Example:
+TurnRightAndMove();
 Move();
 Move();
 Move();
-Turn();
+TurnLeftAndMove();
 Move();
 Move();
-Turn();
-Turn();
-Turn();
 Move();
-*/
+TurnRightAndMove();
+TurnLeftAndMove();
+TurnRightAndMove();
+Move();
+Move();
+Move();
+TurnLeftAndMove();
+TurnRightAndMove();
+Move();
+Move();
+Move();
+Move();
+TurnLeftAndMove();
+Move();
+Move();
+TurnRightAndMove();
+TurnLeftAndMove();
+Move();
+TurnRightAndMove();
+TurnLeftAndMove();
+Move();
+TurnLeftAndMove();
+Move();
+Move();
+Move();
+Move();
+TurnRightAndMove();
+TurnLeftAndMove();
+TurnRightAndMove();
+Move();
+TurnLeftAndMove();
+Move();
+Move();
+TurnRightAndMove();
+Move();
+Move();
+TurnLeftAndMove();
+TurnRightAndMove();
+Move();
+TurnLeftAndMove();
+Move();
+Move();
+TurnLeftAndMove();
+Move();
+Move();
+TurnLeftAndMove();
+Move();
+Move();
+Move();
+Move();
+TurnRightAndMove();
+Move();
+Move();
+Move();
+Move();
+TurnRightAndMove();
+TurnLeftAndMove();
+TurnRightAndMove();
+TurnLeftAndMove();
+Move();
+Move();
+TurnRightAndMove();
+Move();
+Move();
+Move();
+Move();
+TurnRightAndMove();
+Move();
+AtGoal = true;
 
 
 #region Basic functions
@@ -23,9 +86,16 @@ void Move()
     // Moves the car 1 cell in the direction it is heading. 
 }
 
-void Turn()
+void TurnRightAndMove()
 {
     // Turns the car 90 deg clockwise.
+    Move();
+}
+
+void TurnLeftAndMove()
+{
+    // Turns the car 90 deg counter clockwise.
+    Move();
 }
 
 bool Peek()
