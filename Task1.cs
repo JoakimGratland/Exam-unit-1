@@ -4,12 +4,35 @@ while(AtGoal() == false)
     if (Peek() == true)
     {
      Move();
-     leaveTrailBehindCar();
     }
     else
     {
-        Turn();
+        if (TurnCounter < 2)
+        {
+            Turn();
+            TurnCounter++;
+        }
+        else
+        {
+            TurnLeft();
+            TurnCounter++;
+        }
     }
+
+    if (TurnCounter == 4)
+    {
+        TurnCounter = 0
+    }
+}
+
+#mycode
+int TurnCounter = 0;
+void TurnLeft()
+{
+    for (int i = 0; i < 4; i++)
+    (
+     Turn();
+    )
 }
 
 #region Basic functions
@@ -17,11 +40,6 @@ while(AtGoal() == false)
 void Move()
 {
     // Moves the car 1 cell in the direction it is heading. 
-}
-
-void leaveTrailBehindCar()
-{
-    //leaves a trail behind the car that prevents the car from going back where it came from
 }
 
 void Turn()
