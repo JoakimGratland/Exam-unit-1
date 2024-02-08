@@ -1,4 +1,4 @@
-TurnRightAndMove();
+Turn();
 Move();
 Move();
 Move();
@@ -6,47 +6,44 @@ TurnLeftAndMove();
 Move();
 Move();
 Move();
-TurnRightAndMove();
+Turn();
 TurnLeftAndMove();
-TurnRightAndMove();
-Move();
-Move();
-Move();
-TurnLeftAndMove();
-TurnRightAndMove();
-Move();
+Turn();
 Move();
 Move();
 Move();
 TurnLeftAndMove();
+Turn();
 Move();
 Move();
-TurnRightAndMove();
-TurnLeftAndMove();
 Move();
-TurnRightAndMove();
-TurnLeftAndMove();
 Move();
 TurnLeftAndMove();
 Move();
 Move();
-Move();
-Move();
-TurnRightAndMove();
-TurnLeftAndMove();
-TurnRightAndMove();
-Move();
+Turn();
 TurnLeftAndMove();
 Move();
-Move();
-TurnRightAndMove();
-Move();
-Move();
+Turn();
 TurnLeftAndMove();
-TurnRightAndMove();
 Move();
 TurnLeftAndMove();
 Move();
+Move();
+Move();
+Move();
+Turn();
+TurnLeftAndMove();
+Turn();
+Move();
+TurnLeftAndMove();
+Move();
+Move();
+Turn();
+Move();
+Move();
+TurnLeftAndMove();
+Turn();
 Move();
 TurnLeftAndMove();
 Move();
@@ -54,25 +51,28 @@ Move();
 TurnLeftAndMove();
 Move();
 Move();
-Move();
-Move();
-TurnRightAndMove();
-Move();
-Move();
-Move();
-Move();
-TurnRightAndMove();
-TurnLeftAndMove();
-TurnRightAndMove();
 TurnLeftAndMove();
 Move();
 Move();
-TurnRightAndMove();
+Move();
+Move();
+Turn();
 Move();
 Move();
 Move();
 Move();
-TurnRightAndMove();
+Turn();
+TurnLeftAndMove();
+Turn();
+TurnLeftAndMove();
+Move();
+Move();
+Turn();
+Move();
+Move();
+Move();
+Move();
+Turn();
 Move();
 AtGoal = true;
 
@@ -86,7 +86,7 @@ void Move()
     // Moves the car 1 cell in the direction it is heading. 
 }
 
-void TurnRightAndMove()
+void Turn()
 {
     // Turns the car 90 deg clockwise.
     Move();
@@ -94,7 +94,10 @@ void TurnRightAndMove()
 
 void TurnLeftAndMove()
 {
-    // Turns the car 90 deg counter clockwise.
+     for (int i = 0; i < 4; i++)
+    (
+     Turn();
+    )
     Move();
 }
 
