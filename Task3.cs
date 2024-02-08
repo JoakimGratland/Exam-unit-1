@@ -3,13 +3,44 @@ while(AtGoal() == false)
     if (Peek() == true)
     {
      Move();
-     leaveTrailBehindCar();
     }
-    else
+    else if (TurnOnCorner8 <= 8)
     {
-        Turn();
+        TurnLeft();
+    } 
+    else
+    { 
+        if (TurnCounter < 2)
+        {
+            Turn();
+            TurnCounter++;
+            TurnOnCorner8++;
+        }
+        else
+        {
+            TurnLeft();
+            TurnCounter++;
+            TurnOnCorner8++;
+        }
+    }
+
+    if (TurnCounter == 4)
+    {
+        TurnCounter = 0
     }
 }
+
+#mycode
+int TurnCounter = 0;
+int TurnOnCorner8 = 0;
+void TurnLeft()
+{
+    for (int i = 0; i < 4; i++)
+    (
+     Turn();
+    )
+}
+
 
 #region Basic functions
 
