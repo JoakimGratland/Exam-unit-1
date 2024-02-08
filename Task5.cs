@@ -1,19 +1,61 @@
 while(AtGoal() == false)
 {
-    if (peekLeftIfMultipleChoises() == true)
-    {
-     TurnLeft();
-    }
-    else if (Peek() == true)
+    if (Peek() == true)
     {
      Move();
     }
-    else
+    else if (FinalStretch <= 2)
     {
-     TurnRight();
+        PeekRightandMove();
+    } 
+    else
+    { 
+        if (TurnCounter < 1)
+        {
+            Turn();
+            TurnCounter++;
+            
+        }
+        else
+        {
+            TurnLeft();
+            TurnCounter++;
+            
+        }
+    }
+
+    if (TurnCounter == 3)
+    {
+        TurnCounter = 0
+        FinalStretch++;
     }
 }
 
+#mycode
+int TurnCounter = 0;
+int FinalStretch = 0;
+void TurnLeft()
+{
+    for (int i = 0; i < 4; i++)
+    (
+     Turn();
+    )
+}
+
+void PeekRightandMove()
+{
+       Turn(); 
+        
+        if (Peek()) 
+        {
+            Move(); 
+        }
+        else 
+        { 
+            TurnLeft(); 
+            Move(); 
+        }
+}
 
 #region Basic functions
 // These functions are just her to make your intelisense work. 
@@ -24,21 +66,11 @@ void Move()
     // Moves the car 1 cell in the direction it is heading. 
 }
 
-void TurnRight()
+void Turn()
 {
     // Turns the car 90 deg clockwise.
 }
 
-void TurnLeft()
-{
-    // Turns the car 90 deg counter clockwise.
-}
-
-bool peekLeftIfMultipleChoises()
-{
-    // when met with multiple choices of where to go it will always choose the leftmost path.
-    return true; // Just a placeholder value. 
-}
 
 bool Peek()
 {
